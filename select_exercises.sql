@@ -1,0 +1,15 @@
+USE codeup_test_db;
+SELECT 'name of all albums by pink floyd' AS 'Info';
+SELECT name FROM albums WHERE artist = 'Pink Floyd';
+SELECT 'the year Sgt. Pepper''s Lonely Hearts Club Band was released' AS 'Info';
+SELECT release_date FROM albums WHERE name = 'Sgt. Pepper''s Lonely Hearts Club Band';
+SELECT 'the genre for Nevermind' AS 'Info';
+SELECT genre FROM albums WHERE name = 'Nevermind';
+SELECT 'which albums were released in the 1990s' AS 'Info';
+SELECT name, release_date FROM albums WHERE release_date BETWEEN 1990 AND 1999;
+SELECT 'which albums had less that 20 million certified sales' AS 'Info';
+SELECT name, sales FROM albums WHERE sales < 20;
+SELECT 'All the albums with the genre rock' AS 'Info';
+SELECT artist, name FROM albums WHERE genre = 'rock';
+SELECT 'with wildcards' AS 'Info';
+SELECT artist, name FROM albums WHERE genre LIKE '%rock%';
